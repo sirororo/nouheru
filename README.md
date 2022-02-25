@@ -13,6 +13,10 @@
 
 **URL：**[農へる](http://handson-874214957.ap-northeast-1.elb.amazonaws.com/kiso/shop/index.php)
 
+![***代替テキスト***](https://github.com/sirororo/nouheru/blob/master/diagram/top.pdf)
+
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/top.pdf" >
+
 
 ```text
   ログインをしなくても閲覧は可能です。
