@@ -184,6 +184,9 @@
 
 #### 5.1.1. ログイン[想定作業時間：２分]
 
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/login.png?raw=true" alt="" width="500">
+
+
 
 - [x] [農へる](http://handson-874214957.ap-northeast-1.elb.amazonaws.com/kiso/shop/index.php)にアクセス<br><br>
 
@@ -215,6 +218,8 @@
 
 #### 5.1.2. サービスの依頼をする[想定作業時間：２分]
 
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/irai.png?raw=true" alt="" width="500">
+
 - [x] トップ画面のカテゴリ一覧からサービスを選び`内容を確認する`をクリック<br><br>
 - [x] サービス内容と口コミを確認後`無料相談をする`をクリック<br><br>
 - [x] `作業内容`・`作業日付`・`作業場所の郵便番号`・`作業場所の住所`を記入後`確認して進む`をクリック<br><br>
@@ -225,6 +230,8 @@
 
 #### 5.1.3. 依頼しているリストを確認する[想定作業時間：１分]
 
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/irai_kakunin.png?raw=true" alt="" width="500">
+
 - [x] 左上の`マイページ`をクリック<br><br>
 - [x] `依頼中のリスト`をクリック<br><br>
 - [x] 依頼画面が出るため`内容を確認する`をクリック<br><br>
@@ -233,6 +240,8 @@
 <br>
 
 #### 5.1.4. 依頼完了の手続きをする[想定作業時間：１分]
+
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/kutikomi.png?raw=true" alt="" width="500">
 
 - [x] `依頼中のリスト`の`依頼完了の手続きに進む`をクリック<br><br>
 - [x] `満足度`・`金額`・`感想`を記入後`確認して進む`をクリック<br><br>
@@ -246,6 +255,9 @@
 
 #### 5.2.1. サービスの登録をする[想定作業時間：２分]
 
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/gyoumu_add.png?raw=true" alt="" width="500">
+
+
 - [x] トップ画面の左上にある`マイページ`をクリック<br><br>
 - [x] `サービス設定`の`確認をする`をクリック<br><br>
 - [x] `自分のサービスを掲載する`の`記入へ進む`をクリック<br><br>
@@ -254,7 +266,10 @@
 - [x] 登録確認後に仕事の依頼が来た場合はメールでお知らせしてくれます。依頼内容は`受注リスト`で確認できます<br><br>
 
 <br>
+
 #### 5.2.2. 受注内容を確認する[想定作業時間：１分]
+
+
 
 - [x] トップ画面の左上にある`マイページ`をクリック<br><br>
 - [x] `受注中のリスト`の`確認をする`をクリック<br><br>
