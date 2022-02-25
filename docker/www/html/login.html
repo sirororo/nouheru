@@ -1,0 +1,83 @@
+<template>
+    <div>
+      <b-container fluid="md">
+        <b-form>
+          <div>
+            <b-card
+              no-body
+              class="overflow-hidden"
+              style="max-width: 940px;"
+            >
+              <b-row no-gutters>
+                <b-col md="6">
+                  <b-card-img
+                    src="/img/G002.jpg"
+                    alt="Image"
+                    class="rounded-0"
+                  ></b-card-img>
+                </b-col>
+                <b-col md="6">
+                  <b-card-body title="金沢街商店街 ログインページ">
+                    <b-card-text>
+                      <b-form-group
+                        id="input-group-1"
+                        label="ユーザーID"
+                        label-for="input-1"
+                        label-size="lg"
+                        label-class="font-weight-bold"
+                        label-cols-sm="4"
+                      >
+                        <b-form-input
+                          id="input-1"
+                          v-model="form.userid"
+                          type="text"
+                          required
+                        ></b-form-input>
+                      </b-form-group>
+                      <b-form-group
+                        id="input-group-2"
+                        label="パスワード"
+                        label-for="input-2"
+                        label-size="lg"
+                        label-class="font-weight-bold"
+                        label-cols-sm="4"
+                      >
+                        <b-form-input
+                          id="input-2"
+                          v-model="form.password"
+                          type="password"
+                          required
+                        ></b-form-input>
+                      </b-form-group>
+  
+                      <b-button type="submit" variant="primary">
+                        ログイン
+                      </b-button>
+                      <span class="ml-4">
+                        <b-link href="#">
+                          アカウント作成はこちら
+                        </b-link>
+                      </span>
+                    </b-card-text>
+                  </b-card-body>
+                </b-col>
+              </b-row>
+            </b-card>
+          </div>
+        </b-form>
+      </b-container>
+    </div>
+  </template>
+  <script>
+  export default {
+    data() {
+      return {
+        form: {
+          userid: "",
+          password: "",
+        },
+      };
+    },
+  };
+  </script>
+  

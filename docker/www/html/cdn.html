@@ -1,0 +1,54 @@
+
+
+<!--
+   bootstrap-vue用 
+
+   表
+   https://qiita.com/h-naito/items/3a72828c31ad88a72ad5
+-->
+
+
+<!doctype html>
+<html lang="jp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-with, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="content-type" content="text/html; charset = UTF-8">
+    <title>My first Bootstrap-Vue app</title>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+  
+
+
+
+</head>
+
+<body>
+    <div id="app">
+        <b-btn v-b-toggle.collapse1 variant="primary">Toggle Collapse</b-btn>
+        <b-collapse id="collapse1" class="mt-2">
+            <b-card>
+                <p class="card-text">Collapse contents Here</p>
+                <b-btn v-b-toggle.collapse1_inner size="sm">Toggle Inner Collapse</b-btn>
+                <b-collapse id=collapse1_inner class="mt-2">
+                    <b-card>Hello!</b-card>
+                </b-collapse>
+            </b-card>
+        </b-collapse>
+    </div>
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
+</body>
+
+</html>

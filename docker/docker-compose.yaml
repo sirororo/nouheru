@@ -1,0 +1,82 @@
+# https://skillup-blog.com/docker_dev_env/
+# https://zukucode.com/2019/06/docker-compose-mysql.html
+
+
+version: "3" # Composeファイルの書式のバージョン
+services:
+  nginx:
+    image: nginx:latest # nginx:latestイメージを元にビルド
+    container_name: docker_compose_nginx
+    ports:
+      - 8080:80 # localhostの8080番ポートとdockerコンテナの80番ポートをバインド
+    volumes:
+      # ローカルのリソースをコンテナにマウント
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./www/html:/var/www/html
+    depends_on:
+      - php # phpコンテナに依存
+    networks:
+      - back-end
+      
+
+  php:
+    build: ./php # php/Dockerfileを元にビルド
+    container_name: docker_compose_php
+    volumes:
+      - ./www/html:/var/www/html # ここに自分のアプリコード
+      - ./php/php.ini:/usr/local/etc/php/php.ini # phpに関するデータ
+      - ./www:/var/www/html
+    tty: true
+    depends_on:
+      - db # dbコンテナに依存
+    networks:
+      - back-end
+
+
+
+
+  db:
+    image: mysql:5.7
+    container_name: docker_compose_db
+    ports:
+      - 3306:3306 # localhostの3306番ポートとdockerコンテナの3306番ポートをバインド
+    volumes:
+      - ./mysql/db/data:/var/lib/mysql # ./mysql/dataをコンテナの/var/lib/mysqlにマウント
+      - ./mysql/db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql/db/sql:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: site
+      #MYSQL_DATABASE: docker_db
+       MYSQL_USER: root
+       MYSQL_PASSWORD: root
+       TZ: 'Asia/Tokyo'
+    networks:
+      - back-end
+
+      
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+       PMA_ARBITRARY: 1
+       PMA_HOSTS: db
+       PMA_USER: root
+       PMA_PASSWORD: root
+    #links:
+     # - db
+    ports:
+      - 9090:80
+    #volumes:
+     # - ./phpmyadmin/sessions:/sessions
+    networks:
+      - back-end
+
+
+networks:
+    back-end:
+    
+
+    
+
+    

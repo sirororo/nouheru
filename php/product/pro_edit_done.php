@@ -1,0 +1,178 @@
+<?php
+
+session_start();
+session_regenerate_id(true);
+if(isset($_SESSION['member_login'])==false)
+{
+	$member_name='ゲスト';
+	$member_code=0;
+	$disp_member_login='<a href="../member/member_login.html">会員ログイン</a>';
+	$disp_member_new='<a href="../member/member_new.html">無料会員登録</a><br />';
+}
+else
+{
+	$member_name=$_SESSION['member_name'];
+	$member_code=$_SESSION['member_code'];
+	$disp_member_logout='<a href="../member/member_logout.php">ログアウト</a><br />';
+	$disp_pro_list='<a href="../product/pro_list.php">業種の追加や変更</a><br />';
+
+}
+?>
+
+
+<?php
+ini_set('display_errors',1);
+
+try
+{
+
+	require_once('../common/common.php');
+
+	$post=sanitize($_POST);
+
+	$pro_code=$post['pro_code'];
+
+	$title=$post['title'];
+	$gyousyu=$post['gyousyu'];
+	$price=$post['price'];
+	$serves=$post['serves'];
+	$business_hours=$post['business_hours'];
+	$support_place=$post['support_place'];
+	$pay=$post['pay'];
+	$profile=$post['profile'];
+
+	$gazou_name=$_POST['gazou_name'];
+
+	$gazou_name=htmlspecialchars($gazou_name);
+
+
+$dsn='mysql:dbname=site;host=handson.czoyfw5itcgq.ap-northeast-1.rds.amazonaws.com;charset=utf8;';
+$user='admin';
+$password='50Aruki20';
+$dbh=new PDO($dsn,$user,$password);
+$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+
+// codeは持ってきたコードの条件のところに
+// SET で新しく持ってきた物に変える
+// ？はSETやWHERE関係なく代入される
+// ?は順番に代入されるから注意
+$sql='UPDATE mst_product SET 
+title=? ,
+price=? ,
+gazou=?,
+serves=? ,
+business_hours=? ,
+support_place=?,
+pay=? ,
+profile=? ,
+gyousyu=?
+
+ WHERE code=?';
+$stmt=$dbh->prepare($sql);
+$data[]=$title;
+$data[]=$price;
+$data[]=$gazou_name;
+$data[]=$serves;
+$data[]=$business_hours;
+$data[]=$support_place;
+$data[]=$pay;
+$data[]=$profile;
+$data[]=$gyousyu;
+
+$data[]=$pro_code;
+$stmt->execute($data);
+
+$dbh=null;
+
+print '修正しました。<br />';
+
+}
+catch(Exception$e)
+{
+	print'ただいま障害により大変ご迷惑をお掛けしております。';
+	exit();
+}
+
+?>
+
+
+<!---------------------------------------------------------------------------------------------------------------->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>らくらく</title>
+  <link rel="stylesheet" href="../top/css/reset.css"/>
+  <link rel="stylesheet" href="../top/css/style.css"/>
+
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'dsd7crf',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+        <h1>農家をお助けするアプリ</h1>
+        <ul>
+
+
+<?php
+if($member_code==0)
+{
+?>
+
+<!--ログアウト中-->
+
+            <li><a href="#"><?php print  $disp_member_login;?></a></li>
+            <li><a href="#"><?php print  $disp_member_new;?></a></li>
+
+<?php
+}else{
+?>
+
+<!--ログイン中-->
+
+            <li><a href="#"><?php print  $disp_member_logout;?></a></li>
+            <li><a href="#"><?php print  $disp_pro_list;?></a></li>
+
+<?php
+}
+?>
+
+</ul>
+
+    </header>
+    <div class="TopPhoto">
+        <img src="../top/images/TopPhoto.png" alt="メインイメージ画像">
+    </div>
+    
+    <nav>
+        <ul>
+		<li><a href="../shop/shop_list.php">管理画面</a></li>
+            <li><a href="../shop/daikou_list.php">農業代行</a></li>
+            <li><a href="../shop/noukigu_list.php">農機具レンタル</a></li>
+            <li><a href="../shop/help_list.php">栽培システム設置の代行</a></li>
+            <li><a href="../shop/house_list.php">専門の経理・会計</a></li>
+            <li><a href="../shop/sonota_list.php">その他のお手伝い</a></li>
+        </ul>
+    </nav>
+    
+
+
+
+
+<a href="pro_list.php">トップに戻る</a>
+
+</body>
+</html>
