@@ -13,9 +13,15 @@
 
 **URL：**[農へる](http://handson-874214957.ap-northeast-1.elb.amazonaws.com/kiso/shop/index.php)
 
-![***代替テキスト***](https://github.com/sirororo/nouheru/blob/master/diagram/top.pdf)
 
-<img src="https://github.com/sirororo/nouheru/blob/master/diagram/top.pdf" >
+
+
+
+![トップ１](https://github.com/sirororo/nouheru/blob/master/diagram/top1.png?raw=true)
+
+![トップ２](https://github.com/sirororo/nouheru/blob/master/diagram/top2.png?raw=true)
+
+
 
 
 ```text
@@ -72,6 +78,7 @@
 ## 3. 主な利用シーン
 - 「農機具を購入したいが高額で手が出せない・・・」 <br>→　　他の農家から**レンタル**することで、**購入コスト**と**保管場所のコスト**を抑えることができる
 
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/noukigu1.jpg?raw=true" alt="農機具" width="500">
 
 
 ```text
@@ -80,35 +87,51 @@
 
 
 
-<br>
+<br><br>
 
 - 「最新の農機具を使ってみたいが高額で種類も多くてわからない・・・」<br>→　　**無料サービス**で実際に体験ができ、気に入れば**そのまま購入**もできる
+
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/doron.jpg?raw=true" alt="ドローン" width="500">
+
 ```text
    例）ドローンを無料体験してみる
 ```
 
-<br>
+<br><br>
 
 - 「農業法人の設立したいがわからない・・・」<br>→　　**農業専門の行政書士**が代行してくれる
+
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/keiri2.jpg?raw=true" alt="行政書士" width="500">
+
 ```text
    例）めんどくさい農業に関する起業の手続きを代行してもらえる
 ```
 
-<br>
+<br><br>
 
 - 「売上と書類管理に手間がかかり農業に専念できない・・・」<br>→　　月額費を払えばデータ管理を**クラウドで管理**し、**業務の手間を大幅に削減**できる
+
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/it.jpg?raw=true" alt="インフラ" width="500">
+
 ```text
    例）生産や販売管理をデータ化して可視化することで常に状況を簡単に確認できる
 ```
 
-<br>
+<br><br>
 
 - 「農業を始めたいが初期費用として栽培システムの設置が高額すぎて手が出せない・・・」<br> →　　**月額制のレンタル**から始めて、**一定期間利用**して頂ければ**そのままもらえる**
+
+
+<img src="https://github.com/sirororo/nouheru/blob/master/diagram/saibai1.jpg?raw=true" alt="インフラ" width="500">
+
+
+                                                                                                             
+                                                                                                             
 ```text
    例）ビニールハウスと水耕栽培装置セットで月額16,9800円でレンタルできる（１２ヶ月利用でそのまま引き取れる）
 ```
 
-<br>
+<br><br>
 
 ---
 
@@ -127,7 +150,7 @@
   ・取引履歴
 ```
 
-  <br>
+  <br><br>
 
 - **サービス利用関連**
 
@@ -139,7 +162,7 @@
   ・サービスの口コミと評価
 ```
 
-<br>
+<br><br>
 
 
 - **ユーザー登録関連**
@@ -150,7 +173,7 @@
   ・ログイン・ログアウト
 ```
 
-<br>
+<br><br>
 
 
 ---
@@ -160,6 +183,7 @@
 ### 5.1. 依頼の手順
 
 #### 5.1.1. ログイン[想定作業時間：２分]
+
 
 - [x] [農へる](http://handson-874214957.ap-northeast-1.elb.amazonaws.com/kiso/shop/index.php)にアクセス<br><br>
 
@@ -244,6 +268,8 @@
 
 ### 6.1. PHP
 
+![エラー](https://github.com/sirororo/nouheru/blob/master/diagram/era.png?raw=true)
+
 - [x] ファイルアップロード時の**ファイル名をランダム化**<br><br>
 - [x] 画像ファイルは予め画像ファイルしか選択できないように<br><br>
 - [x] 画像ファイルアップロード時には予め**指定した拡張子以外はエラー**表示<br><br>
@@ -257,6 +283,8 @@
 <br>
 
 ### 6.2. AWS
+
+![AWS](https://github.com/sirororo/nouheru/blob/master/diagram/aws.png?raw=true)
 
 - [x] パブリックサブネットへ**SSH接続**する際の設定は**マイIPのみでアクセス**するように<br><br>
 - [x] パスワードログインでは危険なのでルートアカウントの**MFAを有効化**<br><br>
