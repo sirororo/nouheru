@@ -64,12 +64,12 @@
   - [5.2. AWS](#52-aws)
 - [6. 苦労した点](#6-苦労した点)
 - [7. 今後の課題](#7-今後の課題)
-- [8. 資料](#8-資料)
-  - [8.1. 画像資料](#81-画像資料)
-  - [8.2. 参考教材](#82-参考教材)
-  - [8.3. セキュリティ教材](#83-セキュリティ教材)
-- [9. 使用言語](#9-使用言語)
-- [10. DB設計](#10-db設計)
+- [8. 使用言語](#8-使用言語)
+- [9. DB設計](#9-db設計)
+- [10. 資料](#10-資料)
+  - [10.1. 画像資料](#101-画像資料)
+  - [10.2. 参考教材](#102-参考教材)
+  - [10.3. セキュリティ教材](#103-セキュリティ教材)
 
 <br>
 
@@ -340,32 +340,13 @@
 今はterraformで**EC2やS3**などを１つずつ構築するような簡単なことしかできないため、**実践レベルまで技術を上げていきます。**
 
 ---
-## 8. 資料
-
-### 8.1. 画像資料
-
-- [photoAC](https://www.photo-ac.com/)
-- [ぱくたそ](https://www.pakutaso.com/)
-- [揖斐川工業株式会社](https://www.ibiko.co.jp/)
-
-### 8.2. 参考教材
-
-- [CS Career Kaizen University](https://www.cscareerkaizen.com/about)
-- [気づけばプロ並みPHP 改訂版](https://www.ric.co.jp/book/programming/detail/192)
-- [HTML、CSS をマスター](https://www.udemy.com/course/html5css3-b/)
-- [フロントエンドウェブ開発をBootstrap Vueでスタート!!](https://www.udemy.com/course/tanakatakashi-01bootstrapvue/)
-
-### 8.3. セキュリティ教材
-
-- [本当は怖いファイルアップロード攻撃](https://at-virtual.net/securecoding/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89%E6%94%BB%E6%92%83%E3%81%AE%E7%90%86%E8%A7%A3%E3%81%A8%E4%BF%AE%E6%AD%A3%E6%96%B9%E6%B3%95/)
-- [PHPセキュリティー](https://wepicks.net/category/phpsecurity/)
-
-<br>
 
 
 
 
-## 9. 使用言語
+
+
+## 8. 使用言語
 
 - フロントエンド
   - Bootstrapーvue
@@ -388,7 +369,9 @@
 <br>
 
 
-## 10. DB設計
+---
+
+## 9. DB設計
 
 <br>
 
@@ -410,4 +393,26 @@
 
 
 
+## 10. 資料
+
+### 10.1. 画像資料
+
+- [photoAC](https://www.photo-ac.com/)
+- [ぱくたそ](https://www.pakutaso.com/)
+- [揖斐川工業株式会社](https://www.ibiko.co.jp/)
+
+### 10.2. 参考教材
+
+- [CS Career Kaizen University](https://www.cscareerkaizen.com/about)
+- [気づけばプロ並みPHP 改訂版](https://www.ric.co.jp/book/programming/detail/192)
+- [HTML、CSS をマスター](https://www.udemy.com/course/html5css3-b/)
+- [フロントエンドウェブ開発をBootstrap Vueでスタート!!](https://www.udemy.com/course/tanakatakashi-01bootstrapvue/)
+- [bootstrap]()
+
+### 10.3. セキュリティ教材
+
+- [本当は怖いファイルアップロード攻撃](https://at-virtual.net/securecoding/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89%E6%94%BB%E6%92%83%E3%81%AE%E7%90%86%E8%A7%A3%E3%81%A8%E4%BF%AE%E6%AD%A3%E6%96%B9%E6%B3%95/)
+- [PHPセキュリティー](https://wepicks.net/category/phpsecurity/)
+
+<br>
 
