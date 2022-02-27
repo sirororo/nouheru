@@ -405,7 +405,7 @@
 
 - [photoAC](https://www.photo-ac.com/)
 - [ぱくたそ](https://www.pakutaso.com/)
-- [揖斐川工業株式会社](https://www.ibiko.co.jp/)
+
 
 ### 10.2. 参考教材
 
