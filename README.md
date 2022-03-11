@@ -225,6 +225,21 @@
 
 ![AWS](https://github.com/sirororo/nouheru/blob/master/diagram/aws.png?raw=true)
 
+
+![ER図](https://github.com/sirororo/nouheru/blob/master/diagram/Untitled.png?raw=true)
+
+
+| テーブル名 | 説明            |
+| ----: | --------------- |
+|dat_member| ユーザー情報 |
+| mst_product | サービス情報 |
+| iraityu_sales| 依頼の内容 |
+| iraityu_sales_product| 依頼内容の詳細 |
+| ok_sales| 依頼完了の内容 |
+| ok_sales_product| 依頼完了の詳細 |
+
+<br>
+
 ✔  パブリックサブネットへ**SSH接続**する際の設定は**マイIPのみでアクセス**するようにする<br><br>
 ✔ パスワードログインでは危険なのでルートアカウントの**MFAを有効化**<br><br>
 ✔ 外部から直接アクセスできないようにRDSはプライベートサブネットに設置する<br><br>
