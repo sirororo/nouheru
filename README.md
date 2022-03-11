@@ -1,20 +1,31 @@
 
 <br>
 
+
 【概要】
-**農家の生活が豊かになるアプリ**を作りました。
+農家の生活を楽にするために、主に以下のサービスを受けられる
+
+✔ 農家の業務を委託できる
+
+✔ 農機具を農家同士でシェアする
+
+✔ 農機具を購入する前に、無料で一度体験をすることができる
+
 <br>
 
 **URL：**[アプリ](http://handson-874214957.ap-northeast-1.elb.amazonaws.com/kiso/shop/index.php)
 
-**URL：**[github](https://github.com/sirororo/nouheru)
+
+
+
+![トップ１](https://github.com/sirororo/nouheru/blob/master/diagram/top1.png?raw=true)
+
+![トップ２](https://github.com/sirororo/nouheru/blob/master/diagram/top2.png?raw=true)
 
 <br>
 【農家のメリット】
 
 ✔ サービスの**口コミ**や**評価**を参考にできる
-
-✔ サービス提供者同士が**競争**することで、**品質が高い**
 
 ✔ 農機具の**レンタル**をすることで**費用を抑える**ことができる
 
@@ -26,8 +37,6 @@
 
 ✔ 使っていない農機具を**他の農家に貸す**ことで**利益を得られる**（CtoC）
 
-✔ 口コミや評価によって**業務改善**につながる
-
 ✔ 「無料サービス」の利用から**高額な農機具の販売に繋げられる**（DtoC）
 
 ✔ **広告面**として多くの農家に最新の農機具や便利なアプリを**見てもらえる**
@@ -36,12 +45,6 @@
 
 <br>
 
-
-
-
-![トップ１](https://github.com/sirororo/nouheru/blob/master/diagram/top1.png?raw=true)
-
-![トップ２](https://github.com/sirororo/nouheru/blob/master/diagram/top2.png?raw=true)
 
 
 
