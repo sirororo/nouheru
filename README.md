@@ -13,9 +13,11 @@
 
 <br>
 
+**URL：**[サービス内容](https://qiita.com/sirororo/items/a9e121983e73fb4b4805)
+
 **URL：**[アプリ](http://handson-874214957.ap-northeast-1.elb.amazonaws.com/kiso/shop/index.php)
 
-
+**URL：**[Qiita](https://qiita.com/sirororo/items/e2ea79b717d9c7562f0c)
 
 
 ![トップ１](https://github.com/sirororo/nouheru/blob/master/diagram/top1.png?raw=true)
